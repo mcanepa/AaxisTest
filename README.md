@@ -47,6 +47,12 @@ DATABASE_URL="postgresql://[usuario]:[password]@127.0.0.1:5432/[nombre_db]?serve
 
 Reemplaza ```usuario```, ```password```, y ```nombre_db``` con los datos verdaderos de conexión.
 
+Una vez editado el archivo, hay que generar una clave de aplicación
+
+```
+php bin/console lexik:jwt:generate-keypair
+```
+
 ## Paso 4: Crear base de datos y tablas
 
 Ejecutar
