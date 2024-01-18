@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>AAXIS - Administrador de productos</title>
+		<link href="bootstrap.css" rel="stylesheet">
+		<script src="bootstrap.js" defer></script>
+		<script src="main.js" defer></script>
+ 	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row flex-nowrap">
+				<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+					<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+						<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+							<span class="fs-4">ADMIN</span>
+						</a>
+						<hr>
+						<ul class="nav nav-pills w-100 flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+							<li class="w-100">
+								<a href="#" class="nav-link text-white">Home</a>
+							</li>
+							<li>
+								<a href="#" class="nav-link text-white">Menú item A</a>
+							</li>
+							<li>
+								<a href="#" class="nav-link text-white">Menú item B</a>
+							</li>
+							<li>
+								<a href="#" class="nav-link text-white">Menú item C</a>
+							</li>
+							<li class="w-100">
+								<a href="#" class="nav-link text-white active">Productos</a>
+							</li>
+						</ul>
+						<hr>
+					</div>
+				</div>
+				<div class="col py-3">
+					<main>
+						<div class="row flex-nowrap">
+							<div class="col-md-12">
+								<form id="register">
+									<input type="email" name="email" placeholder="e-mail" required>
+									<input type="password" name="password" placeholder="password" required>
+									<button type="submit" class="btn btn-success">REGISTRAR</button>
+								</form>
+							</div>
+						</div>
+						<hr>
+						<div class="row flex-nowrap">
+							<div class="col-md-12">
+								<form id="login">
+									<input type="email" name="email" placeholder="e-mail" required>
+									<input type="password" name="password" placeholder="password" required>
+									<button type="submit" class="btn btn-primary">LOGIN</button>
+								</form>
+								<br>
+								<label>JWT:</label>
+								<textarea id="token"></textarea>
+							</div>
+						</div>
+						<hr>
+						<div class="row flex-nowrap mt-5">
+							<div class="col-md-12">
+								<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+									<li class="nav-item" role="presentation">
+										<button class="nav-link active" id="pills-get-tab" data-bs-toggle="pill" data-bs-target="#pills-get" type="button" role="tab" aria-controls="pills-get" aria-selected="true">Listado</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="pills-post-tab" data-bs-toggle="pill" data-bs-target="#pills-post" type="button" role="tab" aria-controls="pills-post" aria-selected="false">Crear</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="pills-put-tab" data-bs-toggle="pill" data-bs-target="#pills-put" type="button" role="tab" aria-controls="pills-put" aria-selected="false">Actualizar</button>
+									</li>
+								</ul>
+								<div class="tab-content" id="pills-tabContent">
+									<div class="tab-pane fade show active" id="pills-get" role="tabpanel" aria-labelledby="pills-get-tab">
+										<button type="button" class="btn btn-primary" id="do_get">GET</button>
+										<table class="table" id="products_list">
+											<thead>
+												<tr>
+													<th>SKU</th>
+													<th>Nombre</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+										</table>
+									</div>
+									<div class="tab-pane fade" id="pills-post" role="tabpanel" aria-labelledby="pills-post-tab">
+										<form id="do_post">
+											<textarea name="payload">[{"sku": 123,"name": "test123"},{"sku": 456,"name": "test456"},{"sku": 789,"name": "test789"}]</textarea>
+											<br>
+											<button type="submit" class="btn btn-success">POST</button>
+										</form>
+									</div>
+									<div class="tab-pane fade" id="pills-put" role="tabpanel" aria-labelledby="pills-put-tab">
+										<form id="do_put">
+											<textarea name="payload">[{"sku": 123,"name": "update_test123"},{"sku": 1,"name": "x"}]</textarea>
+											<br></br>
+											<button type="submit" class="btn btn-warning">PUT</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
