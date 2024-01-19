@@ -77,6 +77,8 @@ symfony server:start
 
 (si no tienes ese comando, sigue [estas instrucciones](https://symfony.com/download))
 
+Eso deja corriendo el proyecto en http://127.0.0.1:8000
+
 Ahora que la API está online, puedes probarla con la interfaz gráfica que viene en este proyecto. Ve a la carpeta frontend y haz doble click en el archivo index.html
 
 Allí podrás registrar un nuevo usuario, hacer login, ver un listado de registros y tendrás la posibilidad de crear más y actualizarlos!!
@@ -88,11 +90,11 @@ Los endpoints de la API son:
 Puedes testearlos con la UI provista o mediante algun programa como Postman
 
 ```
-/registration [POST]
-/login_check [POST]
-/products [GET]
-/products [POST]
-/products [PUT]
+http://127.0.0.1:8000/api/registration [POST]
+http://127.0.0.1:8000/api/login_check [POST]
+http://127.0.0.1:8000/api/products [GET]
+http://127.0.0.1:8000/api/products [POST]
+http://127.0.0.1:8000/api/products [PUT]
 ```
 
 ## Saludos
